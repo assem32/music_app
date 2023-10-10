@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="30dp"
+    >
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintGuide_percent="0.2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal"
+        android:id="@+id/g1"
+        />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Title"
+        android:textSize="30dp"
+        android:id="@+id/title"
+
+        />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/musicimg"
+        app:layout_constraintTop_toTopOf="@+id/g1"
+        app:layout_constraintBottom_toBottomOf="@id/g2"
+        />
+    <androidx.constraintlayout.widget.Guideline
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintGuide_percent="0.7"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal"
+        android:id="@+id/g2"
+        />
+    <SeekBar
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        app:layout_constraintTop_toBottomOf="@id/g2"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toEndOf="@id/duration_start"
+        app:layout_constraintEnd_toStartOf="@id/duration_end"
+        android:id="@+id/seekbar"
+        android:backgroundTint="@color/white"
+        />
+    <TextView
+        android:id="@+id/duration_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toStartOf="@id/seekbar"
+        app:layout_constraintTop_toBottomOf="@id/g2"
+        android:text="0000"
+        android:textColor="@color/white"
+        />
+    <TextView
+        android:id="@+id/duration_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/seekbar"
+        app:layout_constraintTop_toBottomOf="@id/g2"
+        android:layout_marginTop="20dp"
+        android:text="0000"
+        android:textColor="@color/white"
+        />
+
+
+
+    <ImageView
+        android:id="@+id/iv_backward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/backward_solid"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seekbar"
+        android:elevation="20dp"
+        android:layout_marginStart="20dp"
+
+        />
+
+    <ImageView
+        android:id="@+id/iv_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pause_solid"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toEndOf="@id/iv_backward"
+        app:layout_constraintEnd_toStartOf="@+id/iv_forward"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/seekbar"/>
+    <ImageView
+        android:id="@+id/iv_play"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/play_solid"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toEndOf="@id/iv_backward"
+        app:layout_constraintEnd_toStartOf="@+id/iv_forward"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/seekbar"/>
+
+    <ImageView
+        android:id="@+id/iv_forward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+
+        android:src="@drawable/forward_solid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seekbar"
+        android:elevation="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+
+        />
+
+
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
